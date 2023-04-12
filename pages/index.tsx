@@ -7,18 +7,17 @@ import Head from "next/head";
 import React from "react";
 import { domain } from "../domain";
 
-export async function getServerSideProps(context: any) {
-  const data = await fetchMeta(domain);
-  return {
-    props: data,
-  };
-}
+// export async function getServerSideProps(context: any) {
+//   const data = await fetchMeta(domain);
+//   return {
+//     props: data,
+//   };
+// }
 
 export default function Error({ url, title, description, icon, image }: any) {
   const router = useRouter();
-
   useEffect(() => {
-    router.replace(url);
+    console.log('useEffect error')
   }, []);
 
   return (
